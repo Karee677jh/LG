@@ -11,5 +11,5 @@ from m8n.config import (
 
 @USER.on_message(filters.text & filters.private & ~filters.me & ~filters.bot)
 async def pmPermit(client: USER, message: Message):
-  await USER.send_message(message.chat.id,"هلا حبيبي , هذا رد تلقائي الحساب خاص للمساعد اذا عندك شي راسل المطور\n\n‹ اتمنى ماتدز رسائل مزعجة ›")
+  await USER.send_message(message.chat.id," ده رد تلقائي يسطا \n\n‹ ياريت مش تبعت تاني يسطا عشان ده مش حساب شخصي ده حساب مساعد البوت اغاني ›")
   return
