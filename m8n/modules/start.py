@@ -16,7 +16,7 @@ from m8n.config import OWNER_USERNAME
 
 
 
-@Client.on_message(command("/start") & filters.private & ~filters.edited)
+@Client.on_message(command("/music") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{START_PIC}",
@@ -48,7 +48,7 @@ async def start_(client: Client, message: Message):
 @Client.on_message(command(["المطور", f"مطور"]) & filters.group & ~filters.edited)
 async def gcstart(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
+        photo=f"https://telegra.ph/file/b79cc2a6b9e871d8d1cd9.jpg",
         caption=f"- مطور البوت . \n\n - قناة المطور @{UPDATE}",
         reply_markup=InlineKeyboardMarkup(
             [
