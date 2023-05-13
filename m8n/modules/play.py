@@ -224,7 +224,7 @@ async def play(_, message: Message):
 
     if message.chat.id in DISABLED_GROUPS:
         await message.reply(
-            " __**- المطور ضايج وطفة البوت راسلة وكله شبيك رحمه لدينك! **__"
+            " __**- المطور زعلان وطفة البوت راسلة وقولو مالك رحمه لدينك! **__"
         )
         return
     lel = await message.reply("‹ يتم التشغيل الان ›")
@@ -239,19 +239,19 @@ async def play(_, message: Message):
         return
     if not c.can_manage_voice_chats:
         await lel.edit(
-            "- انطيني هاي الصلاحية حتى اكدر اشغل."
+            "- انطيني هاي الصلاحية حتى اعرف اشغل."
             + "\n- صلاحية الاتصال"
         )
         return
     if not c.can_delete_messages:
         await lel.edit(
-            "- انطيني هاي الصلاحية حتى اكدر اشغل."
+            "- انطيني هاي الصلاحية حتى اعرف اشغل."
             + "\n- حذف رسائل"
         )
         return
     if not c.can_invite_users:
         await lel.edit(
-            "- انطيني هاب الصلاحية حتى اكدر اشغل."
+            "- انطيني هاب الصلاحية حتى اعرف اشغل."
             + "\n- اضافة مستخدمين"
         )
         return
@@ -311,7 +311,7 @@ async def play(_, message: Message):
         file_name = get_file_name(audio)
         url = f"https://t.me/{UPDATE}"
         title = audio.title
-        thumb_name = "https://te.legra.ph/file/5fdd8da2461c05d893189.jpg"
+        thumb_name = "https://telegra.ph/file/b79cc2a6b9e871d8d1cd9.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -366,7 +366,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://te.legra.ph/file/5fdd8da2461c05d893189.jpg"
+            thumb_name = "https://telegra.ph/file/b79cc2a6b9e871d8d1cd9.jpg"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
@@ -598,9 +598,9 @@ async def play(_, message: Message):
         await music_on(message.chat.id)
         await add_active_chat(message.chat.id)
         await message.reply_photo(
-            photo="https://te.legra.ph/file/5fdd8da2461c05d893189.jpg",
+            photo="https://telegra.ph/file/b79cc2a6b9e871d8d1cd9.jpg",
             reply_markup=keyboard,
-            caption="**[- تَم حبيبيَ اެصعَد اެسمعهاެ 🫶🏻.]({})\n\n**- شغݪهأ أݪأخ : {}**\n- أسم ڪࢪۅبي : {}**".format(
+            caption="**[- تَم حبيبيَ اެصعَد اެسمعهاެ 🫶🏻.]({})\n\n**- شغݪهأ أݪأخ : {}**\n- أسم الجروب : {}**".format(
                 url, message.from_user.mention(), message.chat.title
             ),
         )
